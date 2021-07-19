@@ -45,6 +45,10 @@ module.exports = {
         return createApp(stores);
     },
 
+    async setupAppWithCustomConfig(stores, customOptions) {
+        return createApp(stores, undefined, undefined, customOptions);
+    },
+
     async setupAppWithAuth(stores) {
         return createApp(stores, IAuthType.DEMO);
     },
